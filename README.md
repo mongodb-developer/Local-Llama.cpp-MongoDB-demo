@@ -89,6 +89,6 @@ Store Processed Data: Update your MongoDB Atlas collection with the generated em
 ## llama.cpp Documentation
 [llama.cpp Python Documentation](https://llama-cpp-python.readthedocs.io/en/latest/)
 
-## LangChain Integration with llama.cpp
+## LangChain Integration with llama.cpp 🦜 ⛓️
 [LangChain llama.cpp Integration Documentation](https://python.langchain.com/v0.2/docs/integrations/llms/llamacpp/)
 
