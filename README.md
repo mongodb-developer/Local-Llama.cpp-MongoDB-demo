@@ -83,7 +83,9 @@ print("Processed and updated all documents with embeddings.")
 Summary
 
 Connect to MongoDB Atlas: Ensure your Python script connects to your MongoDB Atlas cluster using the connection string.
+
 Generate Embeddings: Use llama.cpp to generate embeddings for your text data.
+
 Store Processed Data: Update your MongoDB Atlas collection with the generated embeddings.
 
 # Useful Resources
