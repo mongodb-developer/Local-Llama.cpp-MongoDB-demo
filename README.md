@@ -1,4 +1,4 @@
-# Local-Llama.cpp-MongoDB-demo
+# Local-Llama.cpp-MongoDB-demo 🦙
 Run Llama.cpp locally (local LLM) persist embeddings and data to MongoDB Atlas 
 
 # Integrating MongoDB Atlas and llama.cpp
