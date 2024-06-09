@@ -3,6 +3,7 @@ Run Llama.cpp locally (local LLM) persist embeddings and data to MongoDB Atlas
 
 ![Description of the image](https://drive.google.com/uc?export=view&id=1mxAWh35Psc6uxbTjRkViAhoW35v-U-zq)
 
+
 # Integrating MongoDB Atlas and llama.cpp
 
 ## Step 1: Data Ingestion
