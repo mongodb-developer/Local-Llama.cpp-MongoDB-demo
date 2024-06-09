@@ -26,8 +26,7 @@ db = client.myDatabase
 collection = db.userInteractions
 Insert Data
 Inserting Data: Insert user interaction data into your MongoDB Atlas collection.
-python
-Copy code
+
 interactions = [
     {"user_id": 1, "interaction": "Clicked on product A", "timestamp": "2023-06-01T12:00:00Z"},
     {"user_id": 2, "interaction": "Viewed category B", "timestamp": "2023-06-01T12:05:00Z"},
