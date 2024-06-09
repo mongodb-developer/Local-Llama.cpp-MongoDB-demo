@@ -8,11 +8,12 @@ Run Llama.cpp locally (local LLM) persist embeddings and data to MongoDB Atlas
 ### Connect to MongoDB Atlas
 
 1. **Install `pymongo`**:
-   ```bash
+   ```
    pip install pymongo
+```
 Connect to MongoDB Atlas: Use your connection string to connect to MongoDB Atlas.
-python
-Copy code
+
+```
 from pymongo import MongoClient
 
 # Replace with your MongoDB Atlas connection string
@@ -29,13 +30,12 @@ interactions = [
     {"user_id": 2, "interaction": "Viewed category B", "timestamp": "2023-06-01T12:05:00Z"},
     # Add more interactions as needed
 ]
+```
 
-collection.insert_many(interactions)
 Step 2: Model Processing with llama.cpp
 Generate Embeddings
 Script to Generate Embeddings:
-python
-Copy code
+```
 import subprocess
 import json
 
@@ -46,10 +46,11 @@ def generate_embedding(text):
 # Example usage
 embedding = generate_embedding("Clicked on product A")
 print(embedding)
+```
+
 Step 3: Store Processed Data in MongoDB Atlas
 Extend the Ingestion Script:
-python
-Copy code
+```
 from pymongo import MongoClient
 import subprocess
 import json
@@ -63,10 +64,12 @@ collection = db.userInteractions
 def generate_embedding(text):
     result = subprocess.run(['./llama.cpp', '--text', text], capture_output=True, text=True)
     return json.loads(result.stdout)["embedding"]
+```
 
 # Retrieve data
-interactions = collection.find()
 
+```
+interactions = collection.find()
 for interaction in interactions:
     # Generate embedding
     embedding = generate_embedding(interaction["interaction"])
@@ -74,6 +77,8 @@ for interaction in interactions:
     collection.update_one({"_id": interaction["_id"]}, {"$set": {"embedding": embedding}})
 
 print("Processed and updated all documents with embeddings.")
+```
+
 Summary
 Connect to MongoDB Atlas: Ensure your Python script connects to your MongoDB Atlas cluster using the connection string.
 Generate Embeddings: Use llama.cpp to generate embeddings for your text data.
