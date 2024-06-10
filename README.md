@@ -11,7 +11,7 @@ brew install llama.cpp
 ```
 llama-server --hf-repo microsoft/Phi-3-mini-4k-instruct-gguf --hf-file Phi-3-mini-4k-instruct-q4.gguf
 ```
-# connect to local host on port 8080
+# Connect to local host on port 8080
 ```
 curl 8080/v1/chat/completions 
 ```
