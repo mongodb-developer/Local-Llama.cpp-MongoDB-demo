@@ -3,6 +3,15 @@ Run Llama.cpp locally (local LLM) persist embeddings and data to MongoDB Atlas
 
 ![Description of the image](https://drive.google.com/uc?export=view&id=1mxAWh35Psc6uxbTjRkViAhoW35v-U-zq)
 
+# Install Llama.cpp
+```
+brew install llama.cpp
+```
+# Start llama server
+```
+llama-server --hf-repo microsoft/Phi-3-mini-4k-instruct-gguf --hf-file Phi-3-mini-4k-instruct-q4.gguf
+```
+# connect to local host on port 8080
 
 # Integrating MongoDB Atlas and llama.cpp
 
